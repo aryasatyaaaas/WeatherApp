@@ -17,13 +17,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // search
 searchBtn.addEventListener("click", () => {
-  let city = inputCity.value;
-  if (city === "") {
-    city = "Jakarta";
-  }
+  const city = inputCity.value;
   getWeather(city);
 });
 
+inputCity.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    event.preventDefault(); // ⛔ stop form from reloading page
+    const city = inputCity.value;
+    getWeather(city);
+  }
+});
 async function getWeather(location) {
   try {
     const response =

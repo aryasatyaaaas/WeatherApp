@@ -12,24 +12,18 @@
     --color-sky-300: oklch(82.8% 0.111 230.318);
     --color-sky-400: oklch(74.6% 0.16 232.661);
     --color-sky-500: oklch(68.5% 0.169 237.323);
-    --color-sky-700: oklch(50% 0.134 242.749);
     --color-sky-800: oklch(44.3% 0.11 240.79);
-    --color-sky-900: oklch(39.1% 0.09 240.876);
     --color-blue-400: oklch(70.7% 0.165 254.624);
     --color-slate-900: oklch(20.8% 0.042 265.755);
     --color-white: #fff;
     --spacing: 0.25rem;
     --container-2xl: 42rem;
-    --container-3xl: 48rem;
-    --container-4xl: 56rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
-    --text-xl: 1.25rem;
-    --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
@@ -192,9 +186,6 @@
   }
 }
 @layer utilities {
-  .z-0 {
-    z-index: 0;
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -207,20 +198,8 @@
   .mr-2 {
     margin-right: calc(var(--spacing) * 2);
   }
-  .mr-3 {
-    margin-right: calc(var(--spacing) * 3);
-  }
-  .mr-5 {
-    margin-right: calc(var(--spacing) * 5);
-  }
-  .mr-10 {
-    margin-right: calc(var(--spacing) * 10);
-  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
   }
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
@@ -289,12 +268,6 @@
   .bg-blue-400 {
     background-color: var(--color-blue-400);
   }
-  .bg-blue-400\/40 {
-    background-color: color-mix(in srgb, oklch(70.7% 0.165 254.624) 40%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-blue-400) 40%, transparent);
-    }
-  }
   .bg-blue-400\/80 {
     background-color: color-mix(in srgb, oklch(70.7% 0.165 254.624) 80%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
@@ -304,95 +277,11 @@
   .bg-sky-200 {
     background-color: var(--color-sky-200);
   }
-  .bg-sky-200\/30 {
-    background-color: color-mix(in srgb, oklch(90.1% 0.058 230.902) 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-200) 30%, transparent);
-    }
-  }
   .bg-sky-300 {
     background-color: var(--color-sky-300);
   }
   .bg-sky-400 {
     background-color: var(--color-sky-400);
-  }
-  .bg-sky-400\/50 {
-    background-color: color-mix(in srgb, oklch(74.6% 0.16 232.661) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-400) 50%, transparent);
-    }
-  }
-  .bg-sky-400\/60 {
-    background-color: color-mix(in srgb, oklch(74.6% 0.16 232.661) 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-400) 60%, transparent);
-    }
-  }
-  .bg-sky-400\/75 {
-    background-color: color-mix(in srgb, oklch(74.6% 0.16 232.661) 75%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-400) 75%, transparent);
-    }
-  }
-  .bg-sky-400\/79 {
-    background-color: color-mix(in srgb, oklch(74.6% 0.16 232.661) 79%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-400) 79%, transparent);
-    }
-  }
-  .bg-sky-400\/80 {
-    background-color: color-mix(in srgb, oklch(74.6% 0.16 232.661) 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-400) 80%, transparent);
-    }
-  }
-  .bg-sky-500 {
-    background-color: var(--color-sky-500);
-  }
-  .bg-sky-800 {
-    background-color: var(--color-sky-800);
-  }
-  .bg-sky-800\/0 {
-    background-color: color-mix(in srgb, oklch(44.3% 0.11 240.79) 0%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-800) 0%, transparent);
-    }
-  }
-  .bg-sky-800\/30 {
-    background-color: color-mix(in srgb, oklch(44.3% 0.11 240.79) 30%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-800) 30%, transparent);
-    }
-  }
-  .bg-sky-800\/50 {
-    background-color: color-mix(in srgb, oklch(44.3% 0.11 240.79) 50%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-800) 50%, transparent);
-    }
-  }
-  .bg-sky-800\/60 {
-    background-color: color-mix(in srgb, oklch(44.3% 0.11 240.79) 60%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-800) 60%, transparent);
-    }
-  }
-  .bg-sky-800\/70 {
-    background-color: color-mix(in srgb, oklch(44.3% 0.11 240.79) 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-800) 70%, transparent);
-    }
-  }
-  .bg-sky-800\/80 {
-    background-color: color-mix(in srgb, oklch(44.3% 0.11 240.79) 80%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-800) 80%, transparent);
-    }
-  }
-  .bg-sky-800\/90 {
-    background-color: color-mix(in srgb, oklch(44.3% 0.11 240.79) 90%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-sky-800) 90%, transparent);
-    }
   }
   .bg-white {
     background-color: var(--color-white);
@@ -418,9 +307,6 @@
   .text-center {
     text-align: center;
   }
-  .text-left {
-    text-align: left;
-  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
@@ -441,18 +327,11 @@
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
   }
-  .text-xs {
-    font-size: var(--text-xs);
-    line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
   .text-\[10px\] {
     font-size: 10px;
   }
   .text-\[13px\] {
     font-size: 13px;
-  }
-  .text-\[20px\] {
-    font-size: 20px;
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -474,13 +353,25 @@
   .underline {
     text-decoration-line: underline;
   }
-  .shadow-2xl {
-    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .focus\:ring {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:ring-0 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
   }
   .sm\:text-2xl {
     @media (width >= 40rem) {
@@ -497,6 +388,11 @@
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-shadow {
   syntax: "*";
@@ -563,16 +459,12 @@
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -587,7 +479,6 @@
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-outline-style: solid;
     }
   }
 }
