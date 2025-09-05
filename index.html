@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/output.css" />
     <link rel="shortcut icon" href="images/sun-cloud.png" type="image/x-icon" />
-    <title>Weather</title>
+    <title>Cloudify</title>
     <style>
       /* * {
         border: 1px solid red;
       } */
       body {
-        background-image: url(images/background.jpg);
+        background-image: url(images/boat-lake.jpg);
       }
     </style>
   </head>
   <body class="bg-cover bg-center">
     <div id="main" class="mx-auto h-screen max-w-2xl p-7">
       <div class="flex items-center justify-center">
-        <h1 class="text-3xl font-semibold text-white">Weather Me</h1>
+        <h1 class="text-3xl font-semibold text-white">Cloudify</h1>
         <img src="images/sun-cloud.png" alt="" width="60" height="30" />
       </div>
       <!-- search bar -->
@@ -71,10 +71,13 @@
           <div
             class="mb-2 flex h-16 w-full justify-between rounded-2xl bg-sky-200 p-2"
           >
-            <img src="images/thermometer.png" alt="" width="48" />
+            <img src="images/thermometer.png" alt="" width="40" />
 
-            <div class="w-1/2 text-center">
-              <h1 class="text-2xl font-bold text-orange-600" id="temp-more">
+            <div class="mr-2 w-1/2 text-center">
+              <h1
+                class="text-lg font-bold text-orange-600 sm:text-2xl"
+                id="temp-more"
+              >
                 27.96
               </h1>
               <p class="text-[10px]">Temperature</p>
@@ -84,9 +87,9 @@
           <div
             class="mb-2 flex h-16 w-full justify-between rounded-2xl bg-sky-200 p-2"
           >
-            <img src="images/wind.png" alt="" width="48" />
+            <img src="images/wind.png" alt="" width="40" />
 
-            <div class="w-1/2 text-center">
+            <div class="mr-2 w-1/2 text-center">
               <h1
                 class="text-[13px] font-bold text-orange-600 sm:text-2xl"
                 id="wind"
@@ -100,9 +103,9 @@
           <div
             class="flex h-16 w-full justify-between rounded-2xl bg-sky-200 p-2"
           >
-            <img src="images/humidity.png" alt="" width="48" />
+            <img src="images/humidity.png" alt="" width="40" />
 
-            <div class="w-1/2 text-center">
+            <div class="mr-2 w-1/2 text-center">
               <h1 class="text-2xl font-bold text-orange-600" id="humidity">
                 76%
               </h1>

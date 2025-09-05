@@ -34,7 +34,7 @@ async function getWeather(location) {
     }
 
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     // temp
     temp.innerHTML = `${data.main.temp}&degC`;
     tempMore.innerHTML = `${data.main.temp}&degC`;
